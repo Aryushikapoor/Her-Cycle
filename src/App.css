@@ -1,6 +1,33 @@
+/* App.css or global CSS file */
+
+/* Ensure the body and html elements cover the full viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Set the background image for the main content area */
+.App{
+  background-image: url('./assets/bghercycle.jpg');
+  background-size: cover; /* Cover the entire element */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent background image from repeating */
+  min-height: 100vh; /* Ensure the content area covers the viewport height */
+}
+
+/* Ensure header and footer are outside the background */
+.header, .footer {
+  background-color:#F7ECF6; /* Example background color for header and footer */
+  z-index: 1; /* Ensure header and footer are on top */
+}
+
+/* Optional: Adjust content padding to account for header and footer height */
+
+
 /* App.css */
 .App {
   text-align: center;
+  padding: 20px;
 }
 
 .hero {
@@ -19,17 +46,21 @@
 
 .footer {
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #F7ECF6;
   text-align: center;
 }
+
 /* Header styles */
 .navbar {
-  background-color: #f8f9fa;
+  background-color: #F7ECF6;
+  border: 5px solid #efc5e6; 
+  border-radius: 20px;
+  
 }
 
 .navbar .nav-link {
   margin-right: 15px;
-  color: #007bff;
+  color: #a7029c;
 }
 
 .navbar .nav-link:hover {
@@ -58,6 +89,7 @@
 .login-button:active {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
 /* HeroSection styles */
 .hero-wrapper {
   position: relative;
@@ -87,18 +119,27 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 50px;
-  background-color: #f8f9fa;
+  background-color: #F7ECF6;
 }
 
 .hero-content {
   flex: 1;
   padding: 20px;
   max-width: 600px;
+  margin-left: 100px;
 }
 
 .hero-content h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #7a076f;
+  margin-bottom: 20px;
+  /* background: rgba(251, 165, 227, 0.8); Background for the text box */
+  padding: 0px;
+  border-radius: 15px;
+  animation: slideIn 1s ease-out;
+}
+.hero-content h2 {
+  padding-top: 0px;
 }
 
 .hero-content p {
@@ -143,15 +184,15 @@
     margin-top: 20px;
   }
 }
+
 /* About styles */
 .about-us-section {
   position: relative;
-  padding: 20px 0; /* Adjust padding as needed */
-  color: 5C3944;
+  padding: 20px 0;
+  color: #5c3944;
   text-align: center;
   overflow: hidden;
-  height: 800px; /* Reduced height of the section */
- padding-bottom: 830px;
+  min-height: 600px; /* Adjusted height */
 }
 
 .about-us-background {
@@ -168,13 +209,39 @@
   position: relative;
   z-index: 1;
   padding: 30px;
-  background: rgba(251, 165, 227, 0.6); /* Semi-transparent background for text readability */
+  background: rgba(243, 128, 210, 0.6); /* Semi-transparent background for text readability */
   border-radius: 15px;
-  max-width: 1100px; /* Adjust max-width as needed */
+  max-width: 1100px;
   margin: auto;
   animation: slideIn 2s ease-out;
   overflow: hidden;
-  padding-bottom: 0%;
+}
+
+.about-us-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-us-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.about-us-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-us-image {
+  display: flex;
+  justify-content: center;
+  height: 300px; /* Adjusted height */
+  padding: 20px;
+}
+
+.about-us-image Lottie {
+  width: 50%;
+  max-width: 300px;
 }
 
 /* Animation for sliding in content */
@@ -188,6 +255,7 @@
     opacity: 1;
   }
 }
+
 @keyframes slideInFromLeft {
   from {
     transform: translateX(-100%);
@@ -210,34 +278,6 @@
   }
 }
 
-.about-us-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-.about-us-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.about-us-content p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-.about-us-image {
-  position: relative; /* Position relative to adjust the vertical positioning */
-  top: -50px; /* Adjust to move image up */
-  display: flex;
-  justify-content: center;
-  height: 400px; /* Reduced height of the container for the image */
-  padding-bottom: 0px;
-}
-
-.about-us-image Lottie {
-  width: 50%; /* Adjust size for better fitting */
-  max-width: 300px; /* Maximum width to ensure it fits well */
-}
 .box {
   position: relative;
   overflow: hidden;
@@ -254,6 +294,7 @@
 .box-right {
   animation: slideInFromRight 2s ease-out;
 }
+
 /* Contact Us styles */
 .contact-us-section {
   position: relative;
@@ -285,18 +326,6 @@
   border-radius: 10px;
   max-width: 600px;
   margin: auto;
-}
-
-/* Animation for sliding in content */
-@keyframes slideInFromRight {
-  from {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 
 .contact-us-form h2 {

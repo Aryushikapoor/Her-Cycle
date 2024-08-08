@@ -4,7 +4,7 @@ import '../App.css';  // Import the custom CSS file
 
 const Header = () => {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="F7ECF6" expand="lg">
       <Container>
         <Navbar.Brand href="#home">BrandName</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

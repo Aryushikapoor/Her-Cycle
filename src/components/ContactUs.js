@@ -5,7 +5,7 @@ import contactImage from '../assets/contact-image.json'; // Path to your image a
 
 const ContactUs = () => {
   return (
-    <section className="contact-us-section">
+    <section id="contact" className="contact-us-section">
       <div className="contact-us-content box-right">
         <div className="contact-us-image">
           <Lottie

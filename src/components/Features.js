@@ -6,7 +6,7 @@ import imageAnimation from '../assets/about-us-image.json'; // Path to your imag
 
 const Features = () => {
   return (
-    <section className="about-us-section">
+    <section id="about" className="about-us-section">
       <div className="about-us-background">
         {/* <Lottie
           animationData={backgroundAnimation}
@@ -15,14 +15,13 @@ const Features = () => {
       </div>
       <div className="about-us-content">
         <div className="box box-left">
-          <h2>About Us</h2>
-          <h3>Our Mission</h3>
+          <h3>About Us</h3>
           <p>
-            We aim to deliver high-quality services and ensure customer satisfaction through innovative solutions and a commitment to excellence.
+          At Her Cycle, we revolutionize menstrual health with expert guidance and innovative technology, empowering you with personalized tools and knowledge for effective, confident management of your menstrual journey.
           </p>
-          <h3>Our Vision</h3>
+          <h4>Our Vision</h4>
           <p>
-            To be the leading provider of exceptional experiences, setting the benchmark for quality and creativity in our industry.
+          We envision a world where menstrual health is openly discussed and managed with ease. Our vision is to be a leading platform in menstrual health management, offering cutting-edge technology and resources to support individuals through every stage of their menstrual journey.
           </p>
         </div>
         <div className="about-us-image">
