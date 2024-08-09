@@ -7,12 +7,26 @@ html, body {
 }
 
 /* Set the background image for the main content area */
-.App{
-  background-image: url('./assets/bghercycle.jpg');
-  background-size: cover; /* Cover the entire element */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent background image from repeating */
-  min-height: 100vh; /* Ensure the content area covers the viewport height */
+.App {
+  position: relative; /* Make the container relative to position the overlay */
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Set the background image for the main content area */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/bgnew.jpg');
+  background-size: auto;
+  background-position: top left;
+  background-repeat: repeat;
+  opacity: 0.3; /* Set the opacity for the background */
+  z-index: -1; /* Ensure the background is behind the content */
 }
 
 /* Ensure header and footer are outside the background */
@@ -45,9 +59,12 @@ html, body {
 }
 
 .footer {
+  margin-top: 20px;
   padding: 20px;
   background-color: #F7ECF6;
   text-align: center;
+  border-radius: 20px;
+  /* border: 5px solid #efc5e6;  */
 }
 
 /* Header styles */
@@ -61,6 +78,8 @@ html, body {
 .navbar .nav-link {
   margin-right: 15px;
   color: #a7029c;
+  font-size: large;
+  
 }
 
 .navbar .nav-link:hover {
@@ -130,7 +149,7 @@ html, body {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   color: #7a076f;
   margin-bottom: 20px;
   /* background: rgba(251, 165, 227, 0.8); Background for the text box */
@@ -143,9 +162,10 @@ html, body {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 1.3rem;
+  color: #525252;
   margin: 20px 0;
+  font-family: Noto Serif Khitan Small Script;
 }
 
 .cta-button {
@@ -177,11 +197,14 @@ html, body {
   }
 
   .hero-content {
-    max-width: 100%;
+    margin-left: 0; /* Remove left margin */
+    max-width: 100%; 
   }
 
   .hero-image {
     margin-top: 20px;
+    max-width: 100%; /* Ensure image scales down */
+    padding: 0; 
   }
 }
 
@@ -213,29 +236,37 @@ html, body {
   border-radius: 15px;
   max-width: 1100px;
   margin: auto;
-  animation: slideIn 2s ease-out;
+  /* animation: slideIn 2s ease-out; */
   overflow: hidden;
 }
 
-.about-us-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.about-us-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-family: Noto Serif Khitan Small Script;
+  font-weight: bold;
+  
 }
 
 .about-us-content h3 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   margin-bottom: 15px;
+  font-weight: bold;
+  font-family: Noto Serif Khitan Small Script;
+  text-decoration: underline; /* Underlines the text */
+  text-underline-offset: 3px;
 }
 
 .about-us-content p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
+  animation: slideIn 2s ease-out;
 }
 
 .about-us-image {
   display: flex;
   justify-content: center;
-  height: 300px; /* Adjusted height */
+  height: 400px; /* Adjusted height */
   padding: 20px;
 }
 
@@ -287,13 +318,13 @@ html, body {
   background-color: rgb(247, 221, 240);
 }
 
-.box-left {
+/* .box-left {
   animation: slideInFromLeft 2s ease-out;
 }
 
 .box-right {
   animation: slideInFromRight 2s ease-out;
-}
+} */
 
 /* Contact Us styles */
 .contact-us-section {
@@ -302,12 +333,13 @@ html, body {
   color: #333;
   background-color: #f8f9fa;
   overflow: hidden;
+  border-radius: 20px;
 }
 
 .contact-us-content {
   display: flex;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
   animation: slideInFromRight 1s ease-out;
 }

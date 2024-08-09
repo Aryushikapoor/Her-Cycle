@@ -10,11 +10,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <div className="App">
+     <div className="background-overlay"></div>
       <Header />
       <div className="App-content">
         <HeroSection />
         <Features />
-        <ContactUs />
+        {/* <ContactUs /> */}
       </div>
       <Footer />
       <WatsonChat />
