@@ -224,7 +224,7 @@ body {
 /* About styles */
 .about-us-section {
   position: relative;
-  padding: 20px 0;
+  padding: 10px 0;
   color: #4d1b3d;
   text-align: center;
   overflow: hidden;
@@ -244,53 +244,93 @@ body {
 .about-us-content {
   position: relative;
   z-index: 1;
+  display: flex; /* Flexbox for horizontal layout */
+  flex-direction: column; /* Default column for mobile */
+  align-items: center;
+  justify-content: center;
   padding: 30px;
   background: rgba(243, 128, 210, 0.6); /* Semi-transparent background for text readability */
   border-radius: 15px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .about-us-content {
+    flex-direction: row; /* Row layout for larger screens */
+  }
 }
 
 .about-us-content h4 {
   font-size: 1.5rem;
   color: #4d1b3d;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   font-family: Noto Serif Khitan Small Script;
   font-weight: bold;
-  text-decoration: underline; /* Underlines the text */
-  text-underline-offset: 3px;
+   /* Underlines the text */
   word-wrap: break-word;
 }
 
 .about-us-content h3 {
   color: #4d1b3d;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-bottom: 15px;
   font-weight: bold;
   font-family: Noto Serif Khitan Small Script;
-  text-decoration: underline; /* Underlines the text */
+  text-decoration: underline;
+  text-decoration-color: #680e5c; /* Change the underline color */
   text-underline-offset: 3px;
   word-wrap: break-word;
+  
 }
 
 .about-us-content p {
   color: #4d1b3d;
-  font-size: 1.2rem;
+  font-size: 20px;
   line-height: 1.6;
   animation: slideIn 2s ease-out;
+  font-family: '__MACKINAC_eaf046','__MACKINAC_Fallback_eaf046';
+  text-align:justify;
+  
 }
 
 .about-us-image {
   display: flex;
   justify-content: center;
-  height: 400px; /* Adjusted height */
-  padding: 20px;
+  align-items: center;
+  height: 300px; /* Adjusted height */
+  padding: 10px;
+  width: 100%; /* Adjust width for responsive design */
+  order: 1; /* Ensure image comes below text content */
+}
+
+@media (min-width: 768px) {
+  .about-us-image {
+    width: 50%; /* Take half of the width on larger screens */
+  }
 }
 
 .about-us-image Lottie {
-  width: 50%;
+  width: 100%; /* Adjust to fit parent container */
   max-width: 300px;
+}
+
+.box-right {
+  width: 100%; /* Full width for small screens */
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: rgb(247, 221, 240);
+  text-align: center; /* Center text for small screens */
+}
+
+@media (min-width: 768px) {
+  .box-right {
+    width: 50%; /* Take half of the width on larger screens */
+    text-align: left; /* Align text to left for larger screens */
+    padding-left: 30px; /* Padding adjustment */
+  }
 }
 
 /* For small screens */
@@ -349,34 +389,6 @@ body {
     opacity: 1;
   }
 }
-
-.box {
-  position: relative;
-  overflow: hidden;
-  padding: 20px;
-  margin: 20px;
-  border-radius: 10px;
-  background-color: rgb(247, 221, 240);
-}
-
-/* Add responsiveness for smaller screens */
-@media (max-width: 768px) {
-  .about-us-content {
-    padding: 20px; /* Adjust padding for smaller screens */
-    max-width: 90%; /* Ensure content scales properly */
-  }
-
-  .about-us-image {
-    height: auto; /* Allow image to adjust based on content */
-  }
-}
-/* .box-left {
-  animation: slideInFromLeft 2s ease-out;
-}
-
-.box-right {
-  animation: slideInFromRight 2s ease-out;
-} */
 
 /* Contact Us styles */
 .contact-us-section {
@@ -453,5 +465,202 @@ body {
 
 .contact-us-form button:hover {
   background-color: #0056b3;
+}
+
+/* vision section starts */
+.vision-section {
+  padding: 40px 20px; /* Space around the section */
+  background-color:  #f7ecf6; /* Light background color for the section */
+  text-align: center; /* Center-align content */
+  border-radius: 20px; /* Rounded corners */
+  margin: 20px auto; /* Center the section horizontally */
+  max-width: 1200px; /* Restrict the maximum width */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.grid-item {
+  background-color: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+}
+
+.grid-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  width: 110px;
+  height: 140px;
+  object-fit:contain;
+  padding-top: 15px;
+
+}
+
+.info {
+  padding: 15px;
+  color: #4d1b3d;
+}
+
+.title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-family: '__MACKINAC_eaf046','__MACKINAC_Fallback_eaf046';
+ font-weight: 510;
+ text-shadow: 2px 2px 4px rgba(255, 105, 180, 0.6);
+}
+
+.description {
+  font-size: 1.2rem;
+  color: #525252;
+  line-height: 1.5;
+  font-family: '__MACKINAC_eaf046','__MACKINAC_Fallback_eaf046';
+}
+
+.stack-end {
+  margin-top: 40px;
+}
+
+.empathy-title {
+  font-size: 1.8rem;
+  color: #d42a9e;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #f8aedd;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
+/* vision section ends */
+
+
+/* Period Info Videos Section */
+.period-info-section {
+  padding: 40px 20px; /* Space around the section */
+  background-color: #f494d1; /* Light background color for the section */
+  text-align: center; /* Center-align content */
+  border-radius: 20px; /* Rounded corners */
+  margin: 20px auto; /* Center the section horizontally */
+  max-width: 1200px; /* Restrict the maximum width */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+
+
+
+.period-info-section h2 {
+  font-size: 2.5rem; /* Heading size */
+  color: #4d1b3d; /* Text color to match theme */
+  margin-bottom: 30px; /* Space below heading */
+  font-family: "Playfair Display", serif; /* Font style */
+}
+
+/* Carousel Container */
+.carousel-container {
+  font-family: '__MACKINAC_eaf046','__MACKINAC_Fallback_eaf046';
+  max-width: 1000px; /* Set a max-width for the carousel box */
+  margin: 0 auto; /* Center the carousel container */
+  padding: 20px; /* Padding around the carousel */
+  /* border: 2px solid #d483c7; Light gray border */
+  border-radius: 20px; /* Rounded corners for the carousel container */
+  background: rgba(243, 128, 210, 0.6); /* White background for the carousel box */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  text-shadow: 2px 2px 4px rgba(244, 114, 182, 0.6);
+}
+/* App.css or another CSS file */
+.custom-purple-link {
+  color: #b7079c; /* Replace with your desired purple shade */
+}
+
+
+/* Video Grid for smaller layout, if needed */
+.video-grid {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid columns */
+  gap: 20px; /* Space between grid items */
+  justify-items: center; /* Center content in each grid item */
+}
+
+/* Video Card */
+.video-card {
+  background-color: #ffffff; /* White background for each video card */
+  border-radius: 15px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect transition */
+  max-width: 100%; /* Ensure full width */
+}
+
+.video-card:hover {
+  transform: translateY(-10px); /* Hover effect */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.video-card iframe {
+  width: 100%; /* Full width for video */
+  height: 200px; /* Set height */
+  border: none; /* Remove default border */
+  border-radius: 15px 15px 0 0; /* Rounded corners at the top */
+}
+
+.video-card .video-info {
+  padding: 15px; /* Inner padding */
+  color: #4d1b3d; /* Text color */
+  font-family: "Noto Serif Khitan Small Script", serif; /* Font style */
+}
+
+.video-card .video-info h3 {
+  font-size: 1.4rem; /* Video title size */
+  margin-bottom: 10px; /* Space below title */
+}
+
+.video-card .video-info p {
+  font-size: 1rem; /* Description size */
+  color: #525252; /* Muted text color */
+  line-height: 1.5; /* Line spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .period-info-section h2 {
+    font-size: 2rem; /* Smaller heading size for mobile */
+  }
+
+  .video-card iframe {
+    height: 180px; /* Adjust video height for smaller screens */
+  }
+
+  .video-card .video-info h3 {
+    font-size: 1.2rem; /* Smaller title size */
+  }
+
+  .video-card .video-info p {
+    font-size: 0.9rem; /* Smaller description size */
+  }
 }
 

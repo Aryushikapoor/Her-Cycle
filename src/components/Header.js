@@ -17,6 +17,8 @@ const Header = () => {
             {/* Add ms-auto class to push links to the right */}
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#about">About Us</Nav.Link>
+            <Nav.Link href="#vision">Guide</Nav.Link> {/* New link to Vision section */}
+            <Nav.Link href="#videos">Explore</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

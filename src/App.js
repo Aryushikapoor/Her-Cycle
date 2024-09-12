@@ -4,6 +4,8 @@ import Features from "./components/Features";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import VisionSection from './components/VisionSection';
+import PeriodInfoVideos from "./components/PeriodInfoVideos";
 import WatsonChat from "./components/WatsonChat";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -15,6 +17,8 @@ function App() {
       <div className="App-content">
         <HeroSection />
         <Features />
+        <VisionSection />
+        <PeriodInfoVideos />
         {/* <ContactUs /> */}
       </div>
       <Footer />
